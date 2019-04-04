@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<STYLE>
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 25px;
+  width: 400px;
+  height: 250px;
+  background: url(/img/bg.png);
+  font-weight: bold;
+}
+#txt {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 1px #0F0F0F;
+ font-size:large;
+}
+
+
+</STYLE>
+<link rel="shortcut icon" type="image/png" href="favicon-32x32.png"/>
+<TITLE>LGH CPPM Device Registrar</TITLE>
+</HEAD>
+<BODY>
+<TABLE border="0" height="100%" width="100%"><TR>
+<TD width="20%" height="100%" bgcolor="#0D5A29"></td>
+<TD align="center" width="%60" height="100%" style="border-right: 2px solid #000101;border-left: 2px solid #000101;">
+<CENTER><BR><BR><BR><BR>
+<img src="newlghlogo3.png" height="250" width="250">
+<H2>LGH CPPM Network Device Registrar</H2>
+<TABLE id="rcorners2" width="%35">
+<TR>
+<FORM action=$PATH_TO_SCRIPT method="post" target="pyframe">
+        <TD id="txt" align="right">Device IP:</TD><TD><INPUT type="text" name="ip" label="Device IP:"></TD></TR>
+        <TR><TD id="txt" align="right">Device Name:</TD><TD><INPUT type="text" name="name" label="Device name:"></TD></TR>
+        <TR><TD id="txt" align="right">Description:</TD><TD><INPUT type="text" name="desc"></TD></TR>
+        <TR>
+         <TD id="txt" colspan="2"><CENTER>
+          <input type="radio" name="dtype" value="APC">UPS
+          <input type="radio" name="dtype" value="SW">Switch
+          <input type="radio" name="dtype" value="RTR">Router
+          <input type="radio" name="dtype" value="OTHER">Other
+         </TD>
+        <TR><TD colspan="2"><CENTER><input type="submit" value="Submit"></TD>
+</FORM>
+</TR>
+</TABLE>
+<iframe name="pyframe" frameborder="0" width="80%"></iframe>
+</TD>
+<TD width="20%" height="100%" bgcolor="#0D5A29"></TD></TR></TABLE>
+</BODY>
+</HTML>
